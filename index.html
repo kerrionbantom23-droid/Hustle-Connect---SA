@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10251c">
+<title>HustleConnect SA — Your next opportunity starts here</title>
+<style>
+:root{--green:#1f8a52;--deep:#10251c;--gold:#f2c14e;--paper:#f5f7f4;--ink:#18221c;--muted:#647168;--white:#fff;--line:#e2e8e2}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+header{background:linear-gradient(125deg,var(--deep),#1a4933);color:white;padding:22px max(18px,calc((100vw - 1080px)/2));}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{font-weight:900;font-size:1.2rem;letter-spacing:.2px}.brand span{color:var(--gold)}.badge{font-size:.78rem;background:#ffffff1b;border:1px solid #ffffff30;border-radius:99px;padding:7px 10px}
+.hero{max-width:1080px;margin:28px auto 12px}.hero h1{font-size:clamp(2rem,6vw,3.5rem);line-height:1.04;margin:0 0 12px;max-width:720px}.hero h1 em{font-style:normal;color:var(--gold)}.hero p{color:#e0e9e3;max-width:610px;line-height:1.6;margin:0 0 20px}
+.search{display:flex;gap:8px;max-width:760px;background:white;border-radius:14px;padding:7px}.search input{border:0;outline:0;min-width:0;flex:1;padding:12px;color:var(--ink);font-size:1rem}.btn{border:0;border-radius:10px;background:var(--gold);color:#241e0b;font-weight:800;padding:12px 16px;cursor:pointer}.btn.dark{background:var(--deep);color:white}.btn.green{background:var(--green);color:white}.wrap{max-width:1080px;margin:auto;padding:22px 18px 48px}.notice{border:1px solid #f1d88b;background:#fff9e6;padding:12px 14px;border-radius:12px;font-size:.9rem;line-height:1.45;margin-bottom:22px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:26px 0 14px}.section-head h2{margin:0;font-size:1.35rem}.section-head p{margin:4px 0 0;color:var(--muted);font-size:.92rem}.categories{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.cat{background:white;border:1px solid var(--line);border-radius:16px;padding:17px;text-align:left;cursor:pointer;transition:.15s}.cat:hover,.cat:focus{border-color:var(--green);transform:translateY(-1px)}.icon{font-size:1.7rem;display:block;margin-bottom:9px}.cat strong{display:block;font-size:1rem}.cat small{display:block;color:var(--muted);margin-top:5px;line-height:1.35}
+.toolbar{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}.filter{border:1px solid var(--line);border-radius:99px;background:white;padding:9px 13px;cursor:pointer;color:var(--ink)}.filter.active{background:var(--deep);color:white;border-color:var(--deep)}
+.listings{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.card{background:white;border:1px solid var(--line);border-radius:15px;padding:17px;display:flex;flex-direction:column;gap:8px}.meta{display:flex;gap:7px;flex-wrap:wrap}.tag{font-size:.75rem;background:#e8f4ec;color:#20653f;border-radius:99px;padding:5px 8px;font-weight:700}.tag.gold{background:#fff3c7;color:#725400}.card h3{margin:0;font-size:1.05rem}.card p{margin:0;color:var(--muted);line-height:1.5;font-size:.92rem}.card .foot{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:5px}.location{font-size:.82rem;color:var(--muted)}.empty{padding:28px;text-align:center;color:var(--muted);background:white;border:1px dashed #cdd8cf;border-radius:15px;grid-column:1/-1}
+.panel{background:white;border:1px solid var(--line);border-radius:16px;padding:20px;margin-top:28px}.panel h2{margin-top:0}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:.86rem;font-weight:750}.field input,.field select,.field textarea{width:100%;border:1px solid #ccd6ce;border-radius:10px;padding:11px;font:inherit;background:white}.field textarea{min-height:84px;resize:vertical}.form-note{color:var(--muted);font-size:.85rem;line-height:1.45}
+footer{background:var(--deep);color:#dce7df;padding:22px 18px;text-align:center;font-size:.86rem}footer strong{color:var(--gold)}
+.hidden{display:none!important}
+@media(max-width:650px){.categories{grid-template-columns:repeat(2,1fr)}.listings{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.search{flex-wrap:wrap}.search input{flex-basis:100%}.search .btn{width:100%}.hero{margin-top:22px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="top"><div class="brand">HUSTLECONNECT <span>SA 🇿🇦</span></div><div class="badge">Beta concept · Free to explore</div></div>
+  <div class="hero">
+    <h1>Your next opportunity <em>starts here.</em></h1>
+    <p>Discover jobs, side hustles, services and business ideas. Connect your skills with opportunities across South Africa.</p>
+    <div class="search"><input id="searchInput" type="search" placeholder="Search jobs, cleaning, business ideas…" aria-label="Search opportunities"><button class="btn" id="searchBtn">Search opportunities</button></div>
+  </div>
+</header>
+<main class="wrap">
+  <div class="notice"><strong>Early demo:</strong> These are sample listings to demonstrate the design, not verified live vacancies. Never pay someone to secure a job, and verify employers before sharing personal information.</div>
+  <div class="section-head"><div><h2>What are you looking for?</h2><p>Choose a category to explore opportunities.</p></div></div>
+  <div class="categories">
+    <button class="cat" data-category="Jobs"><span class="icon">💼</span><strong>Find a job</strong><small>Full-time, part-time and temporary work</small></button>
+    <button class="cat" data-category="Side hustles"><span class="icon">💸</span><strong>Make money</strong><small>Practical side-hustle ideas</small></button>
+    <button class="cat" data-category="Business"><span class="icon">🏪</span><strong>Start a business</strong><small>Ideas and first steps</small></button>
+    <button class="cat" data-category="Services"><span class="icon">🤝</span><strong>Find customers</strong><small>Promote your skills and services</small></button>
+    <button class="cat" data-category="Buy & sell"><span class="icon">🛍️</span><strong>Buy & sell</strong><small>Showcase products and handmade goods</small></button>
+    <button class="cat" data-category="Learning"><span class="icon">📚</span><strong>Learn & grow</strong><small>CV, interview and business basics</small></button>
+  </div>
+
+  <div class="section-head"><div><h2>Explore opportunities</h2><p id="resultText">Sample listings — use filters or search.</p></div></div>
+  <div class="toolbar" id="filters">
+    <button class="filter active" data-category="All">All</button>
+    <button class="filter" data-category="Jobs">Jobs</button>
+    <button class="filter" data-category="Side hustles">Side hustles</button>
+    <button class="filter" data-category="Business">Business</button>
+    <button class="filter" data-category="Services">Services</button>
+    <button class="filter" data-category="Buy & sell">Buy & sell</button>
+    <button class="filter" data-category="Learning">Learning</button>
+  </div>
+  <div class="listings" id="listings"></div>
+
+  <section class="panel" id="submit">
+    <h2>Have an opportunity to share?</h2>
+    <p>Businesses and community members can draft a listing here. In this demo, the listing stays in this browser only; it is not sent to a server or published for other people.</p>
+    <form id="listingForm" class="form-grid">
+      <div class="field"><label for="title">Listing title *</label><input id="title" required maxlength="80" placeholder="e.g. Weekend garden helper"></div>
+      <div class="field"><label for="category">Category *</label><select id="category" required><option value="">Choose category</option><option>Jobs</option><option>Side hustles</option><option>Business</option><option>Services</option><option>Buy & sell</option><option>Learning</option></select></div>
+      <div class="field"><label for="location">Town or province *</label><input id="location" required maxlength="80" placeholder="e.g. East London, Eastern Cape"></div>
+      <div class="field"><label for="contact">Public contact method (optional)</label><input id="contact" maxlength="100" placeholder="Business email or public phone"></div>
+      <div class="field full"><label for="description">Description *</label><textarea id="description" required maxlength="500" placeholder="Describe the opportunity clearly. Do not include passwords, ID numbers or bank details."></textarea></div>
+      <div class="field full"><button class="btn green" type="submit">Save draft listing</button><p class="form-note">Please don't post sensitive personal information. Before launching publicly, the app will need secure storage, moderation, reporting tools and a privacy policy.</p></div>
+    </form>
+    <div id="draftMessage" role="status" class="form-note"></div>
+  </section>
+</main>
+<footer><strong>HustleConnect SA</strong> · Your Hustle. Your Opportunity. Your Future.<br><span>Concept demo — not a live job board yet.</span></footer>
+<script>
+const samples = [
+ {title:"Retail assistant — sample opportunity",category:"Jobs",location:"South Africa · Example",description:"A sample listing to show how entry-level roles could appear. Verify every employer and vacancy before applying.",tag:"Sample only"},
+ {title:"Weekend cleaning services",category:"Services",location:"Your local area",description:"Offer home or small-office cleaning and build a customer base through referrals and reliable service.",tag:"Service idea"},
+ {title:"Start a car-wash hustle",category:"Side hustles",location:"Your local area",description:"Begin by checking local demand, agreeing a safe place to work, and offering a simple service to neighbours or businesses.",tag:"Idea"},
+ {title:"Create a simple CV",category:"Learning",location:"Online",description:"Prepare a clear CV with contact details, education, experience and skills. Tailor it to each real vacancy.",tag:"Free learning"},
+ {title:"Sell homemade products",category:"Buy & sell",location:"South Africa",description:"Test demand for baked goods, crafts or other lawful products. Check relevant food-safety or local rules where applicable.",tag:"Business idea"},
+ {title:"Plan a business with R0",category:"Business",location:"South Africa",description:"Start by listing skills you already have, speaking to potential customers and testing demand before buying equipment.",tag:"Starter guide"}
+];
+let currentCategory = "All";
+let custom = [];
+const listings = document.getElementById("listings");
+const resultText = document.getElementById("resultText");
+function render(){
+ const q = document.getElementById("searchInput").value.trim().toLowerCase();
+ const all = [...custom, ...samples];
+ const shown = all.filter(x => (currentCategory==="All" || x.category===currentCategory) && (!q || (x.title+" "+x.category+" "+x.location+" "+x.description).toLowerCase().includes(q)));
+ listings.innerHTML = "";
+ resultText.textContent = `${shown.length} ${shown.length===1?"listing":"listings"} shown · sample content may not be live`;
+ if(!shown.length){listings.innerHTML='<div class="empty">No matching listings yet. Try another search or category.</div>';return;}
+ shown.forEach(x=>{
+   const el=document.createElement("article");el.className="card";
+   const tags=document.createElement("div");tags.className="meta";
+   const tag=document.createElement("span");tag.className="tag";tag.textContent=x.category;tags.append(tag);
+   if(x.tag){const t=document.createElement("span");t.className="tag gold";t.textContent=x.tag;tags.append(t);}
+   const h=document.createElement("h3");h.textContent=x.title;
+   const p=document.createElement("p");p.textContent=x.description;
+   const foot=document.createElement("div");foot.className="foot";
+   const loc=document.createElement("span");loc.className="location";loc.textContent="📍 "+x.location;
+   foot.append(loc);
+   el.append(tags,h,p,foot);
+   if(x.contact){const c=document.createElement("p");c.textContent="Contact: "+x.contact;el.append(c);}
+   listings.append(el);
+ });
+}
+function setCategory(cat){
+ currentCategory=cat;
+ document.querySelectorAll(".filter").forEach(b=>b.classList.toggle("active",b.dataset.category===cat));
+ render();
+ document.getElementById("listings").scrollIntoView({behavior:"smooth",block:"start"});
+}
+document.querySelectorAll(".cat").forEach(b=>b.addEventListener("click",()=>setCategory(b.dataset.category)));
+document.querySelectorAll(".filter").forEach(b=>b.addEventListener("click",()=>setCategory(b.dataset.category)));
+document.getElementById("searchBtn").addEventListener("click",render);
+document.getElementById("searchInput").addEventListener("keydown",e=>{if(e.key==="Enter")render()});
+document.getElementById("listingForm").addEventListener("submit",e=>{
+ e.preventDefault();
+ const item={title:document.getElementById("title").value.trim(),category:document.getElementById("category").value,location:document.getElementById("location").value.trim(),contact:document.getElementById("contact").value.trim(),description:document.getElementById("description").value.trim(),tag:"Local draft"};
+ custom.unshift(item);
+ try{localStorage.setItem("hustleconnectDrafts",JSON.stringify(custom));}catch(err){}
+ e.target.reset();
+ currentCategory="All";document.querySelectorAll(".filter").forEach(b=>b.classList.toggle("active",b.dataset.category==="All"));
+ document.getElementById("draftMessage").textContent="Draft saved in this browser for this demo. It has not been uploaded or published publicly.";
+ render();
+});
+try{const saved=JSON.parse(localStorage.getItem("hustleconnectDrafts")||"[]");if(Array.isArray(saved))custom=saved.filter(x=>x&&x.title&&x.category);}catch(e){}
+render();
+</script>
+</body>
+</html>
